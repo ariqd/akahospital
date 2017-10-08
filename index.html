@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
+
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" href="#">
             <img src="assets/logohospital.png" alt="logo aka hospital"
@@ -35,23 +36,55 @@
           </div>
         </nav>
 
-        <div class="home">
+        <div class="app app-alt">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <h1 class="title display-3">AKA Health</h1>
-                        <h3>Find out your illness and meet a Doctor immediately. All in one place. </h2>
+                        <h3>Book hospital room and doctor at comfort from your home. </h2>
                     </div>
-                    <div class="col-6">
-                        <div class="mt-4">
-                            <a href="#" class="btn btn-aka btn-lg">Find out my illness</a>
-                            <a href="#" class="btn btn-aka btn-lg">Meet a Doctor</a>
+                    <div class="col-12">
+                        <div class="tab mt-4">
+                             <button class="tablinks" onclick="openCity(event, 'a')" id="defaultOpen">Find a Doctor</button>
+                             <button class="tablinks" onclick="openCity(event, 'b')">Symptoms Checker</button>
+                        </div>
+                        <div id="a" class="tabcontent">
+                             <h3>lorem</h3>
+                             <p>London is the capital city of England.</p>
+                        </div>
+                        <div id="b" class="tabcontent">
+                             <h3>ipsum</h3>
+                             <p>Paris is the capital of France.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <script src="assets/js/jquery.js" charset="utf-8"></script>
         <script src="assets/js/bootstrap.min.js" charset="utf-8"></script>
+        <script type="text/javascript">
+        function openCity(evt, cityName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+            }
+            document.getElementById("defaultOpen").click();
+        </script>
     </body>
 </html>
