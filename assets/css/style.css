@@ -1,5 +1,5 @@
 body {
-    background-color: #F8F9FA;
+    background-color: #ffffff;
 }
 
 .app.app-alt {
@@ -27,7 +27,6 @@ body {
 div.tab {
    overflow: hidden;
    border: 2px solid #eee;
-   background-color: #ffffff;
    border-bottom: none;
 }
 
@@ -39,19 +38,17 @@ div.tab button {
    outline: none;
    cursor: pointer;
    padding: 14px 20px;
-   transition: 0.3s;
+   /*transition: 0.3s;*/
 }
 
 /* Change background color of buttons on hover */
 div.tab button:hover {
-   /*background-color: #ddd;*/
    border-bottom: 3px solid #FF5A5F;
 
 }
 
 /* Create an active/current tablink class */
 div.tab button.active {
-   /*background-color: #ccc;*/
    border-bottom: 3px solid #FF5A5F;
 }
 
@@ -61,16 +58,14 @@ div.tab button.active {
    padding: 20px;
    border: 2px solid #eee;
    border-top: none;
-   background-color: #ffffff;
-
 }
 
 .tabcontent {
-    -webkit-animation: fadeEffect 1s;
-    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+    /*-webkit-animation: fadeEffect 1s;*/
+    /*animation: fadeEffect 1s; /* Fading effect takes 1 second */
 }
 
-@-webkit-keyframes fadeEffect {
+/*@-webkit-keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
 }
@@ -78,4 +73,45 @@ div.tab button.active {
 @keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
+}*/
+
+.content {
+    margin-top: 9em;
+}
+
+.far {
+    line-height: 32px;
+}
+
+.page-block {
+    margin: 9rem 0;
+    padding: 0 3rem
+}
+
+img.page-block-img {
+    display: block;
+    position: absolute;
+    top: 25%;
+}
+
+.footer {
+    background: #FAFAFA;
+    margin-top: 3em;
+    padding: 3em 0 2em 0;
+}
+
+.footer a {
+    margin: 30px;
+    color: #616161;
+    font-size: 18px;
+}
+
+.footer a:hover {
+    text-decoration: none;
+    color: #FF5A5F;
+}
+
+.footer img {
+    display: block;
+    margin: 0 auto;
 }
